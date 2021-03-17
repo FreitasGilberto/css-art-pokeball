@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Pokemon</title>
+<style type="text/css">
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+}
+
+#container{
+position:absolute;
+width:200px;
+height:200px;
+top:0;
+left:0;
+right:0;
+bottom:0;
+margin:auto;
+}
+
+#container:hover #circle::after{
+animation:anime 1s linear infinite;
+}
+
+@keyframes anime{
+0%{
+background:#eee;
+}
+
+50%{
+background:#ff0806;
+box-shadow:0px 0px 7px rgba(225, 0 ,0 ,1);
+}
+
+100%{
+background:#eee;
+}
+
+}
+#upper{
+width:200px;
+height:100px;
+background:#ff0305;
+border-radius:130px 130px 0 0;
+border:2px solid black;
+}
+
+#lower{
+width:200px;
+height:100px;
+background:#eeeeee;
+border:2px solid black;
+border-radius:0 0 130px 130px;
+
+}
+
+#strip{
+width:200px;
+height:30px;
+background:black;
+position:absolute;
+top:85px;
+border-radius:5px;
+
+}
+
+
+#circle{
+position:absolute;
+width:50px;
+height:50px;
+top:75px;
+left:75px;
+background:black;
+border-radius:50%;
+}
+
+#circle::before{
+content:"";
+position:absolute;
+width:30px;
+height:30px;
+background:white;
+border-radius:50%;
+top:10px;
+left:10px;
+}
+
+#circle::after{
+content:"";
+position:absolute;
+width:18px;
+height:18px;
+background:#eee;
+border-radius:50%;
+top:16px;
+left:16px;/*
+border:2px solid black;*/
+box-shadow:0px 0px 5px rgba(7,5,0,0.6);
+} 
+
+</style>
+</head>
+<body>
+<div id="container" >
+	<div id="upper"></div>
+	<div id="lower"></div>
+	<div id="strip"></div>
+	<div id="circle" ></div>
+	<div id="shadow" ></div>
+</div>
+</body>
+</html>
